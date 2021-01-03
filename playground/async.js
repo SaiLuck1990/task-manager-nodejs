@@ -23,3 +23,15 @@ doWork().then((result) => {
     console.log('Error is '+e)
 })
 
+const brcypt = require('bcryptjs')
+
+const myFunction = async() => {
+    const pwd = 'password'
+    const hashedPwd = await brcypt.hash(pwd , 8)
+    console.log(hashedPwd)
+    
+}
+
+
+myFunction()
+
